@@ -2217,7 +2217,7 @@
                     calculatorType: "InferenceCalculator",
                     fieldName: "use_cpu_inference"
                 },
-                default: "iPad Simulator;iPhone Simulator;iPod Simulator;iPad;iPhone;iPod"
+                default:typeof window !== 'undefined' ? navigator.platform.toUpperCase().indexOf("MAC") >= 0 : false
             },
             enableFaceGeometry: {
                 type: 0,
