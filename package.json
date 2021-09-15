@@ -1,6 +1,6 @@
 {
-  "name": "@beeutina/face_mesh",
-  "version": "0.4.1629159166",
+  "name": "@arianatri/facemesharian",
+  "version": "0.5.5",
   "description": "based on Mediapipe Face Mesh Solution",
   "main": "face_mesh.js",
   "module": "face_mesh.js",
@@ -9,19 +9,27 @@
   "types": "index.d.ts",
   "author": "atriarian118@google.com",
   "license": "Apache-2.0",
-  "homepage": "https://google.github.io/mediapipe/solutions/face_mesh",
-  "keywords": [ "AR", "ML", "Augmented" ],
-  "devDependencies": {
-  },
+  "homepage": "https://github.com/arianatri/facemesh#readme",
+  "keywords": [
+    "AR",
+    "ML",
+    "Augmented"
+  ],
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "dependencies": {
   },
   "browser": {
     "node-fetch": false,
     "util": false,
     "crypto": false
   },
-  "sideEffects" : []
+  "sideEffects": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arianatri/facemesh.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arianatri/facemesh/issues"
+  }
 }
