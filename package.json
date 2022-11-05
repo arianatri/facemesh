@@ -1,6 +1,6 @@
 {
   "name": "@arianatri/facemesh",
-  "version": "0.9.1633559620",
+  "version": "0.9.1633559621",
   "description": "no desc",
   "main": "face_mesh.js",
   "module": "face_mesh.js",
