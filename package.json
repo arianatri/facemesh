@@ -1,0 +1,35 @@
+{
+  "name": "@arianatri/facemesh",
+  "version": "0.9.1633559619",
+  "description": "no desc",
+  "main": "face_mesh.js",
+  "module": "face_mesh.js",
+  "jsdelivr": "face_mesh.js",
+  "unpkg": "face_mesh.js",
+  "types": "index.d.ts",
+  "author": "atriarian118@google.com",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/arianatri/facemesh#readme",
+  "keywords": [
+    "AR",
+    "ML",
+    "Augmented"
+  ],
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "browser": {
+    "node-fetch": false,
+    "util": false,
+    "crypto": false
+  },
+  "sideEffects": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arianatri/facemesh.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arianatri/facemesh/issues"
+  }
+}
