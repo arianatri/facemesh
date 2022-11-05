@@ -1730,7 +1730,7 @@ var createMediapipeSolutionsWasm = (function () {
       function instantiateArrayBuffer(receiver) {
         return getBinaryPromise()
           .then(function (binary) {
-            var result = WebAssembly.instantiate(binary.arrayBuffer(), info);
+            var result = WebAssembly.instantiate(binary, info);
             return result;
           })
           .then(receiver, function (reason) {
@@ -1748,17 +1748,14 @@ var createMediapipeSolutionsWasm = (function () {
       function instantiateAsync() {
         if (
           !wasmBinary &&
-          typeof WebAssembly.instantiate === "function" &&
+          typeof WebAssembly.instantiateStreaming === "function" &&
           !isDataURI(wasmBinaryFile) &&
           !isFileURI(wasmBinaryFile) &&
           typeof fetch === "function"
         ) {
           return fetch(wasmBinaryFile, { credentials: "same-origin" }).then(
             function (response) {
-              var result = WebAssembly.instantiate(
-                response.arrayBuffer(),
-                info
-              );
+              var result = WebAssembly.instantiateStreaming(response, info);
               return result.then(receiveInstantiationResult, function (reason) {
                 err("wasm streaming compile failed: " + reason);
                 err("falling back to ArrayBuffer instantiation");
